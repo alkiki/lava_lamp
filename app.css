@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000011; 
+}
+
+
+/* adding transluscent background so there would be a "sticky" effect */
+.lamp{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #00000070; 
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    filter: blur(15px) contrast(30);
+}
+
+.bubble{
+    position: relative;
+    width: 100px;
+    height: 100px;
+    background-color:#00ffff;
+    animation: move 7s ease-in-out infinite alternate;
+}
+/* adding the position and animetion for each bubble */
+.bubble:nth-child(1){
+    top: 50px;
+    left: 30px;
+}
+
+.bubble:nth-child(2){
+    width: 100px;
+    height: 80px;
+    left: 3px;
+    animation-delay: -2s;
+}
+
+.bubble:nth-child(3){
+    width: 80px;
+    height: 80px;
+    left: -10px;
+    animation-delay: -3.5s;
+}
+
+.bubble:nth-child(4){
+    width: 80px;
+    height: 120px;
+    left: 100px;
+    animation-delay: -3s;
+} 
+
+.bubble:nth-child(5){
+    width: 80px;
+    height: 20px;
+    left: 80%;
+    animation-delay: -1.5s;
+}
+
+.bubble:nth-child(6){
+    width: 120px;
+    height: 120px;
+    left: -400px;
+    animation-delay: -2.5s;
+}
+
+.bubble:nth-child(7){
+    width: 40px;
+    height: 40px;
+    left: 20px;
+    animation-delay: -0.5s;
+}
+
+.bubble:nth-child(8){
+    width: 100px;
+    height: 100px;
+    left: -300px;
+    animation-delay: -3s;
+}
+.bubble:nth-child(9){
+    width: 100px;
+    height: 100px;
+    left: 300px;
+    animation-delay: -4s;
+}
+.bubble:nth-child(10){
+    top: 10px;
+    width: 200px;
+    height: 100px;
+    left: 400px;
+    animation-delay: -2s;
+}
+
+/* creating the movement */
+@keyframes move{
+    0%{
+        border-radius: 75% 25% 20% 80% / 34% 47% 53% 66%;
+        transform: translateY(-200px);
+    }
+    100%{
+        border-radius: 50%;
+        transform: translateY(200px);
+    }
+}
+/* adding media queries for responsivness */
+@media(max-width: 800px){
+    .bubble:nth-child(1){
+        top: 50px;
+        left: -200px;
+    }
+    
+    .bubble:nth-child(2){
+        left: -100px;
+        animation-delay: -2s;
+    }
+    
+    .bubble:nth-child(3){
+        right: 90px;
+        animation-delay: -3.5s;
+    }
+    
+    .bubble:nth-child(4){
+        left: 10%;
+        animation-delay: -3s;
+    } 
+    
+    .bubble:nth-child(5){
+        left: -40px;
+        animation-delay: -1.5s;
+    }
+    
+    .bubble:nth-child(6){
+        left: -80px;
+        animation-delay: -2.5s;
+    }
+    
+    .bubble:nth-child(7){
+        left: 20px;
+        animation-delay: -0.5s;
+    }
+    
+    .bubble:nth-child(8){
+        left: -200px;
+        animation-delay: -4s;
+    }
+    .bubble:nth-child(9){
+        width: 100px;
+        height: 100px;
+        left: 30px;
+        animation-delay: -4s;
+    }
+    .bubble:nth-child(10){
+        top: 10px;
+        width: 200px;
+        height: 100px;
+        left: 40px;
+        animation-delay: -2s;
+    }
+}
